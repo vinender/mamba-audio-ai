@@ -1,0 +1,73 @@
+# ── OS / Editors ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# ── Python ───────────────────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ── Env / Secrets ────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+
+# ── Large Audio / Data ───────────────────────────────────────────────────────
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.mp4
+*.m4a
+data/
+!data/.gitkeep
+
+# ── Model checkpoints ────────────────────────────────────────────────────────
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Keep checkpoint directory structure but ignore files
+!checkpoints/.gitkeep
+
+# ── Results / Logs ───────────────────────────────────────────────────────────
+result.json
+*.log
+logs/
+runs/
+wandb/
+
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+build/
+.cache/
+*.local
+
+# ── Vercel ───────────────────────────────────────────────────────────────────
+.vercel
+.env.local
+
+# ── Claude / AI tools ────────────────────────────────────────────────────────
+.claude/

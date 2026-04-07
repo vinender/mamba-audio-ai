@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-ink-light: #1a1a1a;
+  --color-ink-muted: #333333;
+  --color-text: #555555;
+  --color-text-muted: #808080;
+  --color-text-faint: #a4a4a4;
+  --color-border: #e6e6e6;
+  --color-border-light: #f0f0f0;
+  --color-surface: #f5f5f5;
+  --color-surface-light: #fafafa;
+  --color-brand: #286df8;
+  --color-brand-light: #508afb;
+  --color-brand-bg: #e7effc;
+}
+
+/* ── Animations ──────────────────────────────────────────────────────────── */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-bar {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.animate-fade-up { animation: fade-up 0.7s ease-out forwards; opacity: 0; }
+.animate-fade-up-1 { animation: fade-up 0.7s ease-out 0.1s forwards; opacity: 0; }
+.animate-fade-up-2 { animation: fade-up 0.7s ease-out 0.2s forwards; opacity: 0; }
+.animate-fade-up-3 { animation: fade-up 0.7s ease-out 0.35s forwards; opacity: 0; }
+.animate-fade-up-4 { animation: fade-up 0.7s ease-out 0.5s forwards; opacity: 0; }
+.animate-scroll-left { animation: scroll-left 40s linear infinite; }
+
+/* ── Base overrides (inside layer so they don't clobber utilities) ──────── */
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100svh;
+  }
+}
